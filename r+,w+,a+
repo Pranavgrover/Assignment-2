@@ -1,0 +1,17 @@
+file=open("a.txt", "r+")
+print (file.read())
+file.write("abcd")
+print (file.read())
+file.close()
+
+file=open("b.txt", "w+")
+file.write("abc")
+file.seek(0)
+print (file.read())
+file.close()
+
+file=open("c.txt", "a+")
+file.write("ab")
+line=file.readlines()
+file.write(line)
+file.close()
